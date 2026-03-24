@@ -1,0 +1,15 @@
+{
+  "name": "RunPlan AI",
+  "short_name": "RunPlanAI",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff4f0",
+  "theme_color": "#a13900",
+  "icons": [
+    {
+      "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDSQcqidWR3Pxd3lQs8-hOVe33yNi_Hs07tUTnjdTSqbl1tuf0d7N6R5ZRZguvY8_Ah4qawn4EfHdyr_8PeWFvL9_h7WF062qQE7z5OKf1kKC5QdZV_Yjlzpp62XDjf1th_1FT69iZYFSWg_ywfQUExgVX20ZjZleIr8Ku12xPdVd8SsGmXC6ZEwuaitHkmlz8D7xqzdP-3YncxO0KNZ_cXeeV9WnINeVLYUaJDsJN9VBMpZ4hhRb3TUpjAOTyH21H97pmYc5VJA-w",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

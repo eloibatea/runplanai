@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#ff793e",
+              "surface-container-low": "#ffede5",
+              "surface-bright": "#fff4f0",
+              "surface": "#fff4f0",
+              "inverse-on-surface": "#cb906c",
+              "error-container": "#fb5151",
+              "on-error": "#ffefee",
+              "error": "#b31b25",
+              "tertiary": "#0058ba",
+              "surface-container-lowest": "#ffffff",
+              "surface-tint": "#a13900",
+              "secondary-fixed": "#59ee50",
+              "inverse-surface": "#1d0800",
+              "error-dim": "#9f0519",
+              "tertiary-dim": "#004da4",
+              "on-primary-container": "#431300",
+              "on-tertiary-fixed": "#00173a",
+              "on-secondary": "#d2ffc4",
+              "primary-container": "#ff793e",
+              "secondary": "#006b0a",
+              "surface-container-highest": "#ffd4bc",
+              "tertiary-fixed": "#89b0ff",
+              "on-primary-fixed": "#000000",
+              "on-tertiary-container": "#002f69",
+              "on-surface-variant": "#805031",
+              "on-secondary-container": "#005406",
+              "surface-container": "#ffe3d4",
+              "on-surface": "#4b2409",
+              "on-tertiary": "#f0f2ff",
+              "surface-dim": "#ffc9aa",
+              "secondary-container": "#59ee50",
+              "background": "#fff4f0",
+              "surface-container-high": "#ffdbc8",
+              "secondary-dim": "#005d07",
+              "primary-dim": "#8d3100",
+              "tertiary-container": "#89b0ff",
+              "on-primary-fixed-variant": "#521900",
+              "primary": "#a13900",
+              "tertiary-fixed-dim": "#71a2ff",
+              "primary-fixed-dim": "#fe5f00",
+              "on-tertiary-fixed-variant": "#003779",
+              "inverse-primary": "#fe5f00",
+              "on-error-container": "#570008",
+              "secondary-fixed-dim": "#49e043",
+              "outline-variant": "#dda07b",
+              "on-secondary-fixed": "#003e03",
+              "surface-variant": "#ffd4bc",
+              "on-background": "#4b2409",
+              "on-secondary-fixed-variant": "#005f07",
+              "outline": "#a06b4a",
+              "on-primary": "#ffefea"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .kinetic-gradient {
+        background: linear-gradient(135deg, #a13900 0%, #ff793e 100%);
+      }
+      .kinetic-gradient-soft {
+        background: linear-gradient(135deg, #ffede5 0%, #ffdbc8 100%);
+      }
+      body {
+        font-family: 'Manrope', sans-serif;
+        background-color: #fff4f0;
+        color: #4b2409;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#fff4f0]/80 dark:bg-stone-900/80 backdrop-blur-md fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="Avatar del corredor" class="w-full h-full object-cover" data-alt="Close up of a runner face" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7KoD0VYFRm43IfDg8XYnwuLswSxRLNRtMvWlUDyyXbxsU1crDqa-GlEsINEoy60NbLg20L89Xi-fwmnTd8us68-r1cWxWZYqKlGj34yg6M1PISvXvitg7W12j3SZNq9f5H6rKaHkdzGZxnguBr93mhOS0C-Hd7WKpfVHxldjMD3DB6exTU-2_SkqBe7-UPcjX9ArPeugTbNgjtoF6kUo__BI2BkhgT7gLJ8AHyzf1J8-MM5f4a1QkVP4d-iDDge4NIp4dOS-EHc8"/>
+</div>
+<h1 class="font-['Space_Grotesk'] font-bold tracking-tight text-[#4b2409] text-lg uppercase">RUNPLANAI</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#a13900] hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-5xl mx-auto space-y-8">
+<!-- Welcome Header -->
+<section class="space-y-2">
+<h2 class="font-headline text-4xl font-bold tracking-tight text-on-surface">Objetivos</h2>
+<p class="font-label text-sm text-on-surface-variant tracking-wide">PANEL DE RENDIMIENTO Y ESTRATEGIA IA</p>
+</section>
+<!-- Bento Grid Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- IA Analysis Card (Featured) -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-full p-8 shadow-sm border border-surface-container relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-9xl">psychology</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-label text-xs font-bold uppercase tracking-widest text-primary">Análisis IA</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Optimización Basada en Strava</h3>
+<div class="space-y-4">
+<div class="bg-surface-container-low p-5 rounded-xl border-l-4 border-primary">
+<p class="text-on-surface font-medium italic">"Has subido el volumen de desnivel un 18% esta semana. Tu variabilidad de frecuencia cardíaca indica fatiga acumulada. <strong>Descansa mañana</strong> para evitar sobrecarga en los sóleos."</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full text-xs font-bold font-label">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+                                PROGRESO SÓLIDO
+                            </div>
+<div class="flex items-center gap-2 bg-tertiary/10 text-tertiary px-4 py-2 rounded-full text-xs font-bold font-label">
+<span class="material-symbols-outlined text-sm">opacity</span>
+                                HIDRATACIÓN +20%
+                            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Action: Edit Card -->
+<div class="md:col-span-4 bg-primary text-on-primary rounded-full p-8 flex flex-col justify-between kinetic-gradient">
+<div>
+<span class="material-symbols-outlined text-4xl mb-4">edit_note</span>
+<h3 class="font-headline text-2xl font-bold leading-tight">Ajusta tu Trayectoria</h3>
+</div>
+<button class="bg-on-primary text-primary font-label text-xs font-extrabold py-3 px-6 rounded-full self-start hover:scale-105 transition-transform">
+                    EDITAR OBJETIVOS
+                </button>
+</div>
+<!-- Challenge List -->
+<div class="md:col-span-12 space-y-6">
+<h4 class="font-headline text-xl font-bold">Retos Personales</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Goal 1: Ultra Trail -->
+<div class="bg-surface-container-low rounded-full p-6 flex flex-col gap-6 relative overflow-hidden group">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold">OCTUBRE 2024</span>
+<h5 class="font-headline text-xl font-bold">Primer Ultra Trail</h5>
+<p class="text-xs text-on-surface-variant">Valle de Arán, 55km</p>
+</div>
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">terrain</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label text-[10px] font-bold">
+<span>DISTANCIA ACUMULADA</span>
+<span class="text-primary">68%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[68%] shadow-[0_0_10px_rgba(0,107,10,0.3)]"></div>
+</div>
+</div>
+<div class="flex gap-4 items-center">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low bg-surface-dim flex items-center justify-center text-[10px] font-bold">J</div>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-low bg-surface-dim flex items-center justify-center text-[10px] font-bold">M</div>
+</div>
+<span class="text-[10px] font-label font-medium text-on-surface-variant">2 compañeros se han unido</span>
+</div>
+</div>
+<!-- Goal 2: Marathon -->
+<div class="bg-surface-container-lowest rounded-full p-6 flex flex-col gap-6 border border-surface-container shadow-sm">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant font-bold">DICIEMBRE 2024</span>
+<h5 class="font-headline text-xl font-bold">Bajar de 4:00 Maratón</h5>
+<p class="text-xs text-on-surface-variant">Valencia, 42.195km</p>
+</div>
+<div class="text-tertiary">
+<span class="material-symbols-outlined text-3xl">timer</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label text-[10px] font-bold">
+<span>RITMO PROMEDIO OBJETIVO</span>
+<span class="text-tertiary">42%</span>
+</div>
+<div class="h-3 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-[42%]"></div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="bg-surface-container-low p-2 rounded-xl text-center">
+<p class="text-[10px] font-label text-on-surface-variant">PASO</p>
+<p class="font-headline font-bold text-sm">5:35</p>
+</div>
+<div class="bg-surface-container-low p-2 rounded-xl text-center">
+<p class="text-[10px] font-label text-on-surface-variant">RESTANTE</p>
+<p class="font-headline font-bold text-sm">14 sem</p>
+</div>
+<div class="bg-surface-container-low p-2 rounded-xl text-center">
+<p class="text-[10px] font-label text-on-surface-variant">KM/SEM</p>
+<p class="font-headline font-bold text-sm">45.2</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Progress Chart Concept (Asymmetric) -->
+<div class="md:col-span-12 bg-surface-container-low rounded-[2rem] p-8 overflow-hidden relative">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+<div class="space-y-2">
+<h4 class="font-headline text-2xl font-bold">Curva de Carga de Entrenamiento</h4>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest">Últimos 30 días vs Objetivos Anuales</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 rounded-full bg-surface-container-highest text-primary">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+<button class="p-2 rounded-full bg-surface-container-highest text-primary">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Abstract Graph Visual -->
+<div class="relative h-64 w-full flex items-end gap-2 px-4">
+<div class="w-full h-full absolute top-0 left-0 flex items-center justify-center opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[15rem]">show_chart</span>
+</div>
+<div class="flex-1 bg-primary/20 rounded-t-full h-[40%]"></div>
+<div class="flex-1 bg-primary/30 rounded-t-full h-[55%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t-full h-[45%]"></div>
+<div class="flex-1 bg-primary/50 rounded-t-full h-[70%]"></div>
+<div class="flex-1 kinetic-gradient rounded-t-full h-[90%] relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-on-surface text-surface text-[10px] font-bold px-2 py-1 rounded-full whitespace-nowrap">MAX CARGA</div>
+</div>
+<div class="flex-1 bg-primary/60 rounded-t-full h-[65%]"></div>
+<div class="flex-1 bg-primary/40 rounded-t-full h-[50%]"></div>
+<div class="flex-1 bg-primary/30 rounded-t-full h-[35%]"></div>
+<div class="flex-1 bg-primary/20 rounded-t-full h-[45%]"></div>
+<div class="flex-1 bg-primary/10 rounded-t-full h-[20%]"></div>
+</div>
+<div class="flex justify-between mt-4 px-4 font-label text-[10px] text-on-surface-variant font-bold">
+<span>SEM 01</span>
+<span>SEM 02</span>
+<span>SEM 03 (ACTUAL)</span>
+<span>SEM 04</span>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 flex justify-around items-center px-4 pb-safe bg-white dark:bg-stone-950 rounded-t-[0.75rem] z-50 shadow-[0_-20px_40px_rgba(75,36,9,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#4b2409]/50 dark:text-[#fff4f0]/50 px-4 py-2 hover:text-[#a13900] dark:hover:text-[#ff793e] active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4b2409]/50 dark:text-[#fff4f0]/50 px-4 py-2 hover:text-[#a13900] dark:hover:text-[#ff793e] active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Calendario</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#a13900] to-[#ff793e] text-white rounded-[0.75rem] px-4 py-2 scale-110 -translate-y-1 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">ads_click</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Objetivos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4b2409]/50 dark:text-[#fff4f0]/50 px-4 py-2 hover:text-[#a13900] dark:hover:text-[#ff793e] active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Perfil</span>
+</a>
+</nav>
+</body></html>

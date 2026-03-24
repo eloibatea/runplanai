@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#ff793e",
+              "surface-container-low": "#ffede5",
+              "surface-bright": "#fff4f0",
+              "surface": "#fff4f0",
+              "inverse-on-surface": "#cb906c",
+              "error-container": "#fb5151",
+              "on-error": "#ffefee",
+              "error": "#b31b25",
+              "tertiary": "#0058ba",
+              "surface-container-lowest": "#ffffff",
+              "surface-tint": "#a13900",
+              "secondary-fixed": "#59ee50",
+              "inverse-surface": "#1d0800",
+              "error-dim": "#9f0519",
+              "tertiary-dim": "#004da4",
+              "on-primary-container": "#431300",
+              "on-tertiary-fixed": "#00173a",
+              "on-secondary": "#d2ffc4",
+              "primary-container": "#ff793e",
+              "secondary": "#006b0a",
+              "surface-container-highest": "#ffd4bc",
+              "tertiary-fixed": "#89b0ff",
+              "on-primary-fixed": "#000000",
+              "on-tertiary-container": "#002f69",
+              "on-surface-variant": "#805031",
+              "on-secondary-container": "#005406",
+              "surface-container": "#ffe3d4",
+              "on-surface": "#4b2409",
+              "on-tertiary": "#f0f2ff",
+              "surface-dim": "#ffc9aa",
+              "secondary-container": "#59ee50",
+              "background": "#fff4f0",
+              "surface-container-high": "#ffdbc8",
+              "secondary-dim": "#005d07",
+              "primary-dim": "#8d3100",
+              "tertiary-container": "#89b0ff",
+              "on-primary-fixed-variant": "#521900",
+              "primary": "#a13900",
+              "tertiary-fixed-dim": "#71a2ff",
+              "primary-fixed-dim": "#fe5f00",
+              "on-tertiary-fixed-variant": "#003779",
+              "inverse-primary": "#fe5f00",
+              "on-error-container": "#570008",
+              "secondary-fixed-dim": "#49e043",
+              "outline-variant": "#dda07b",
+              "on-secondary-fixed": "#003e03",
+              "surface-variant": "#ffd4bc",
+              "on-background": "#4b2409",
+              "on-secondary-fixed-variant": "#005f07",
+              "outline": "#a06b4a",
+              "on-primary": "#ffefea"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #a13900 0%, #ff793e 100%);
+        }
+        .kinetic-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-[#fff4f0]/80 dark:bg-stone-900/80 backdrop-blur-md fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="Close up portrait of an athletic runner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSQcqidWR3Pxd3lQs8-hOVe33yNi_Hs07tUTnjdTSqbl1tuf0d7N6R5ZRZguvY8_Ah4qawn4EfHdyr_8PeWFvL9_h7WF062qQE7z5OKf1kKC5QdZV_Yjlzpp62XDjf1th_1FT69iZYFSWg_ywfQUExgVX20ZjZleIr8Ku12xPdVd8SsGmXC6ZEwuaitHkmlz8D7xqzdP-3YncxO0KNZ_cXeeV9WnINeVLYUaJDsJN9VBMpZ4hhRb3TUpjAOTyH21H97pmYc5VJA-w"/>
+</div>
+<h1 class="text-xl font-bold tracking-tighter text-[#a13900] dark:text-[#ff793e] uppercase font-headline">RUNPLANAI</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#4b2409]/60 dark:text-[#fff4f0]/60 hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 max-w-7xl mx-auto space-y-8">
+<!-- Main Countdown Hero: Asymmetric Overlap Layout -->
+<section class="relative group">
+<div class="kinetic-gradient rounded-full p-8 md:p-12 text-on-primary overflow-hidden relative shadow-[0_20px_40px_rgba(161,57,0,0.2)]">
+<!-- Abstract Path Graphic -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg class="w-full h-full" viewbox="0 0 400 200">
+<path d="M0,150 Q100,50 200,150 T400,50" fill="none" stroke="currentColor" stroke-width="20"></path>
+</svg>
+</div>
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-end md:items-center gap-6">
+<div class="max-w-md">
+<span class="font-label text-xs uppercase tracking-[0.2em] opacity-80 mb-2 block">PRÓXIMO GRAN RETO</span>
+<h2 class="font-headline text-4xl md:text-6xl font-bold tracking-tighter mb-4 leading-none">Maratón de Valencia</h2>
+<div class="flex gap-4 items-baseline">
+<div class="flex flex-col">
+<span class="font-headline text-5xl md:text-7xl font-extrabold">12</span>
+<span class="font-label text-[10px] uppercase text-center opacity-70">Días</span>
+</div>
+<span class="font-headline text-3xl opacity-50">:</span>
+<div class="flex flex-col">
+<span class="font-headline text-5xl md:text-7xl font-extrabold">04</span>
+<span class="font-label text-[10px] uppercase text-center opacity-70">Horas</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<button class="bg-surface-container-lowest text-primary font-bold px-6 py-3 rounded-full flex items-center gap-2 group-hover:scale-105 transition-transform">
+<span>Ver plan de carrera</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Overlapping Element -->
+<div class="hidden md:block absolute -right-4 -top-4 w-24 h-24 bg-secondary rotate-12 rounded-xl flex items-center justify-center shadow-lg border-4 border-surface">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="timer">timer</span>
+</div>
+</section>
+<!-- Bento Grid for Stats and Goals -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Goal Summary - Circular Graphics -->
+<div class="md:col-span-8 bg-surface-container-low rounded-full p-8 space-y-6">
+<div class="flex justify-between items-center">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Estado de Objetivos</h3>
+<div class="flex gap-2">
+<span class="font-label text-[10px] bg-secondary/10 text-secondary px-3 py-1 rounded-full border border-secondary/20">EN MARCHA</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+<!-- Short Term -->
+<div class="flex flex-col items-center gap-3">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-high" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364" stroke-dashoffset="100" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline text-2xl font-bold">75%</span>
+</div>
+</div>
+<div class="text-center">
+<span class="font-label text-[10px] uppercase block opacity-60">Corto Plazo</span>
+<span class="font-bold text-sm">40km / semana</span>
+</div>
+</div>
+<!-- Mid Term -->
+<div class="flex flex-col items-center gap-3">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-high" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364" stroke-dashoffset="180" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline text-2xl font-bold">50%</span>
+</div>
+</div>
+<div class="text-center">
+<span class="font-label text-[10px] uppercase block opacity-60">Medio Plazo</span>
+<span class="font-bold text-sm">Media Maratón (Sub 1:45)</span>
+</div>
+</div>
+<!-- Long Term -->
+<div class="flex flex-col items-center gap-3">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-high" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-tertiary" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364" stroke-dashoffset="260" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline text-2xl font-bold">30%</span>
+</div>
+</div>
+<div class="text-center">
+<span class="font-label text-[10px] uppercase block opacity-60">Largo Plazo</span>
+<span class="font-bold text-sm">Finisher Maratón</span>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Insight Widget -->
+<div class="md:col-span-4 bg-tertiary text-on-tertiary rounded-full p-8 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute -right-8 -bottom-8 opacity-20 transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[120px]" data-icon="bolt">bolt</span>
+</div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="psychology">psychology</span>
+<span class="font-label text-xs uppercase tracking-widest font-bold">IA SUGGESTION</span>
+</div>
+<p class="font-headline text-xl font-medium leading-tight">
+                        "Tu fatiga es baja hoy. Considera una <span class="text-tertiary-fixed font-bold">sesión de intervalos</span> para mejorar tu VO2 Max antes del fin de semana."
+                    </p>
+</div>
+<div class="relative z-10 mt-6 pt-6 border-t border-on-tertiary/10">
+<div class="flex items-center gap-2 justify-between">
+<img alt="Strava Logo" class="w-5 h-5 rounded-full" data-alt="Orange circular abstract logo symbol" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCECxB_Sa65WfmY31QHJl9kQJh6jpWxDf-DKwuZWbHYIS9cQOeaQkPw8J2iiRiYG3Z6rX8NaKwDsSZ_JS8kHZzSstwJCAyljvRKLC3Zj4JIzJf1lJBDFsODZDMw1KrTqwZ-Le4chKfL1Ml46gLokzm7yg6QQigyP7z8kAoUEwyi9kgq0dQ0ng26256hIBq9BXVoXaWZWCWNs1xX7qz2wzQM6tH5xH8YX65d4llYW3UvHbGQXUXq8wJDX5sd7yj1pCkLp0FPZbn7GoY"/>
+<span class="font-label text-[10px] opacity-70">Sincronizado con Strava hace 5m</span><button class="ml-auto bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 hover:bg-white transition-colors active:scale-95"><span class="material-symbols-outlined text-sm">sync</span>Sincronizar ahora</button>
+</div>
+</div>
+</div>
+<!-- Last Activity - Glassmorphism Card -->
+<div class="md:col-span-12 lg:col-span-12 bg-white rounded-full p-1 shadow-xl overflow-hidden">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/3 h-48 md:h-auto relative">
+<img alt="Map view" class="w-full h-full object-cover rounded-l-full" data-alt="Stylized map showing a running route path" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdG3TsNaFPRXixVNHvEaIl-Xgh7B9wBXBYjakwqu5_SUDqJv6kcYMhCgtiW4r-0bASqTpzVrhPR_nW_kAIorSq5yoeSbZG5e6XHvwp-yzVg0rK11rtiJRF3m6inOpAhC7wFM77hJSuPClSDmSlAJ2xzsEBIXZfIWMBFJBz3-99DbYoE75ruJDoscK7ZfvxBvU7gh5QQId2aMWeCgG7W-NptHgzCj4DtU-aBk5KLwZSjrgoHSYc-OEts-vrj4svUO6nbAoga_Ec6CE"/>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent to-white/10"></div>
+<div class="absolute top-4 left-8 bg-secondary text-white px-3 py-1 rounded-full font-label text-[10px] font-bold">ÚLTIMO ENTRENO</div>
+</div>
+<div class="md:w-2/3 p-8 flex flex-col justify-center gap-6">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-2xl font-bold">Tirada Larga Dominical</h4>
+<p class="text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+<span>Ayer, 08:30 • Madrid, Casa de Campo</span>
+</p>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="moving">moving</span>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="bg-surface-container rounded-full px-6 py-4 flex flex-col">
+<span class="font-label text-[10px] uppercase opacity-60">Distancia</span>
+<span class="font-headline text-2xl font-bold text-primary">18.4<span class="text-sm ml-1">km</span></span>
+</div>
+<div class="bg-surface-container rounded-full px-6 py-4 flex flex-col">
+<span class="font-label text-[10px] uppercase opacity-60">Ritmo Medio</span>
+<span class="font-headline text-2xl font-bold text-primary">4:52<span class="text-sm ml-1">min/km</span></span>
+</div>
+<div class="bg-surface-container rounded-full px-6 py-4 flex flex-col">
+<span class="font-label text-[10px] uppercase opacity-60">Elevación</span>
+<span class="font-headline text-2xl font-bold text-secondary">+245<span class="text-sm ml-1">m</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Metrics Grid -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-low rounded-full p-6 text-center border border-transparent hover:border-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="favorite">favorite</span>
+<span class="font-label text-[10px] uppercase block opacity-60">FC Reposo</span>
+<span class="font-headline text-xl font-bold">54 <span class="text-xs font-normal">ppm</span></span>
+</div>
+<div class="bg-surface-container-low rounded-full p-6 text-center border border-transparent hover:border-primary/20 transition-colors">
+<span class="material-symbols-outlined text-tertiary mb-2" data-icon="bedtime">bedtime</span>
+<span class="font-label text-[10px] uppercase block opacity-60">Calidad Sueño</span>
+<span class="font-headline text-xl font-bold">88 <span class="text-xs font-normal">/100</span></span>
+</div>
+<div class="bg-surface-container-low rounded-full p-6 text-center border border-transparent hover:border-primary/20 transition-colors">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="footprint">footprint</span>
+<span class="font-label text-[10px] uppercase block opacity-60">Desgaste Calzado</span>
+<span class="font-headline text-xl font-bold">342 <span class="text-xs font-normal">km</span></span>
+</div>
+<div class="bg-surface-container-low rounded-full p-6 text-center border border-transparent hover:border-primary/20 transition-colors">
+<span class="material-symbols-outlined text-primary-fixed mb-2" data-icon="local_fire_department">local_fire_department</span>
+<span class="font-label text-[10px] uppercase block opacity-60">Racha</span>
+<span class="font-headline text-xl font-bold">14 <span class="text-xs font-normal">días</span></span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 bg-white dark:bg-stone-950 flex justify-around items-center px-4 pb-safe rounded-t-[0.75rem] z-50 shadow-[0_-20px_40px_rgba(75,36,9,0.06)]">
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#a13900] to-[#ff793e] text-white rounded-[0.75rem] px-4 py-2 scale-110 -translate-y-1 transition-all active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4b2409]/50 dark:text-[#fff4f0]/50 px-4 py-2 hover:text-[#a13900] dark:hover:text-[#ff793e] active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Calendario</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4b2409]/50 dark:text-[#fff4f0]/50 px-4 py-2 hover:text-[#a13900] dark:hover:text-[#ff793e] active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Objetivos</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4b2409]/50 dark:text-[#fff4f0]/50 px-4 py-2 hover:text-[#a13900] dark:hover:text-[#ff793e] active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Perfil</span>
+</a>
+</nav>
+<!-- Contextual FAB - Rendered for Dashboard as primary action -->
+<button class="fixed bottom-24 right-6 w-16 h-16 kinetic-gradient text-white rounded-full flex items-center justify-center shadow-2xl active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>

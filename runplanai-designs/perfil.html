@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#ff793e",
+              "surface-container-low": "#ffede5",
+              "surface-bright": "#fff4f0",
+              "surface": "#fff4f0",
+              "inverse-on-surface": "#cb906c",
+              "error-container": "#fb5151",
+              "on-error": "#ffefee",
+              "error": "#b31b25",
+              "tertiary": "#0058ba",
+              "surface-container-lowest": "#ffffff",
+              "surface-tint": "#a13900",
+              "secondary-fixed": "#59ee50",
+              "inverse-surface": "#1d0800",
+              "error-dim": "#9f0519",
+              "tertiary-dim": "#004da4",
+              "on-primary-container": "#431300",
+              "on-tertiary-fixed": "#00173a",
+              "on-secondary": "#d2ffc4",
+              "primary-container": "#ff793e",
+              "secondary": "#006b0a",
+              "surface-container-highest": "#ffd4bc",
+              "tertiary-fixed": "#89b0ff",
+              "on-primary-fixed": "#000000",
+              "on-tertiary-container": "#002f69",
+              "on-surface-variant": "#805031",
+              "on-secondary-container": "#005406",
+              "surface-container": "#ffe3d4",
+              "on-surface": "#4b2409",
+              "on-tertiary": "#f0f2ff",
+              "surface-dim": "#ffc9aa",
+              "secondary-container": "#59ee50",
+              "background": "#fff4f0",
+              "surface-container-high": "#ffdbc8",
+              "secondary-dim": "#005d07",
+              "primary-dim": "#8d3100",
+              "tertiary-container": "#89b0ff",
+              "on-primary-fixed-variant": "#521900",
+              "primary": "#a13900",
+              "tertiary-fixed-dim": "#71a2ff",
+              "primary-fixed-dim": "#fe5f00",
+              "on-tertiary-fixed-variant": "#003779",
+              "inverse-primary": "#fe5f00",
+              "on-error-container": "#570008",
+              "secondary-fixed-dim": "#49e043",
+              "outline-variant": "#dda07b",
+              "on-secondary-fixed": "#003e03",
+              "surface-variant": "#ffd4bc",
+              "on-background": "#4b2409",
+              "on-secondary-fixed-variant": "#005f07",
+              "outline": "#a06b4a",
+              "on-primary": "#ffefea"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #a13900 0%, #ff793e 100%);
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #fff4f0;
+            color: #4b2409;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fff4f0]/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border-2 border-primary">
+<img class="w-full h-full object-cover" data-alt="Retrato de un corredor profesional sonriendo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAxkdJHZLFWVC3SvQd39Zdz5e_zoZE5RXE80JiHcmtTvZ7BdH8KGyKLJTK1TCmQj_GYRHK14Q2WCnyDdj7aky0wlUB655sxUu__FeOjxfhazzz7OAD-YU4znI93x6Twqt7RrMcJrEPuGykXqsi8pGPKAzzjij_ZkGGJo4DNK-Jx-0ft_I6OXS4_Ow034vI_ceQeBAoqiEzoCEVqh0gGAXBNfyusF3IHgbotw5BCVrqSbeeUPJoy2k6tSIESxDUu_9uaPcyzoveN9s"/>
+</div>
+<h1 class="font-headline font-bold tracking-tight text-on-surface text-xl uppercase tracking-tighter text-primary">RUNPLANAI</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Profile Hero -->
+<section class="relative">
+<div class="flex flex-col gap-2">
+<span class="font-label text-primary font-semibold uppercase tracking-widest text-xs">Atleta de Élite</span>
+<h2 class="font-headline text-5xl font-bold tracking-tighter leading-none mb-2">Marcos Segura</h2>
+<div class="flex gap-4 items-center">
+<span class="flex items-center gap-1 font-label text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+                        Madrid, ES
+                    </span>
+<span class="flex items-center gap-1 font-label text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+                        Miembro desde 2022
+                    </span>
+</div>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-2 gap-4">
+<div class="col-span-2 bg-surface-container-lowest p-6 rounded-full shadow-[0_20px_40px_rgba(75,36,9,0.06)] border-none relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[120px]" data-icon="monitoring">monitoring</span>
+</div>
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest mb-1">Distancia Total</p>
+<div class="flex items-baseline gap-2">
+<span class="font-headline text-5xl font-extrabold text-primary tracking-tighter">4.285</span>
+<span class="font-headline text-xl font-medium text-on-surface-variant uppercase">km</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-full border-none">
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest mb-1">Ritmo Promedio</p>
+<div class="flex items-baseline gap-1">
+<span class="font-headline text-3xl font-bold text-on-surface tracking-tighter">4:12</span>
+<span class="font-label text-xs font-medium text-on-surface-variant">/km</span>
+</div>
+</div>
+<div class="bg-secondary-container/20 p-6 rounded-full border-none">
+<p class="font-label text-xs text-on-surface-variant uppercase tracking-widest mb-1 text-secondary">Desnivel Acum.</p>
+<div class="flex items-baseline gap-1">
+<span class="font-headline text-3xl font-bold text-secondary tracking-tighter">52.4k</span>
+<span class="font-label text-xs font-medium text-secondary">m</span>
+</div>
+</div>
+</section>
+<!-- Connections Section -->
+<section class="space-y-4">
+<h3 class="font-headline text-xl font-bold tracking-tight px-2">Conexiones</h3>
+<div class="bg-surface-container-highest/30 p-5 rounded-full flex items-center justify-between group transition-all">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-[#FC4C02] flex items-center justify-center text-white shadow-lg">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066m-7.008-5.599l2.836 5.598h4.172L10.463 0l-7 13.828h4.169"></path>
+</svg>
+</div>
+<div>
+<p class="font-body font-bold text-on-surface">Strava</p>
+<p class="font-label text-[10px] text-secondary font-semibold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                            Conectado hace 5 min
+                        </p>
+</div>
+</div>
+<button class="bg-surface-container-high px-4 py-2 rounded-full text-xs font-label font-bold text-primary hover:opacity-80 transition-opacity">
+                    GESTIONAR
+                </button>
+</div>
+<div class="bg-surface-container-low p-5 rounded-full flex items-center justify-between opacity-60">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="watch">watch</span>
+</div>
+<div>
+<p class="font-body font-bold text-on-surface">Garmin Connect</p>
+<p class="font-label text-[10px] text-on-surface-variant uppercase tracking-wider">No sincronizado</p>
+</div>
+</div>
+<button class="text-tertiary font-label text-xs font-bold uppercase tracking-widest border-b-2 border-tertiary/20">
+                    CONECTAR
+                </button>
+</div>
+</section>
+<!-- Settings Section -->
+<section class="space-y-4">
+<h3 class="font-headline text-xl font-bold tracking-tight px-2">Ajustes de la Aplicación</h3>
+<div class="bg-surface-container-lowest rounded-[1rem] overflow-hidden shadow-[0_4px_12px_rgba(75,36,9,0.04)]">
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="person_outline">person_outline</span>
+<span class="font-body font-medium">Información Personal</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-px bg-surface-container mx-5"></div>
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="notifications_active">notifications_active</span>
+<span class="font-body font-medium">Notificaciones Push</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-px bg-surface-container mx-5"></div>
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="language">language</span>
+<div class="text-left">
+<span class="font-body font-medium block">Idioma</span>
+<span class="font-label text-[10px] text-on-surface-variant uppercase">Español (España)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+<div class="h-px bg-surface-container mx-5"></div>
+<button class="w-full flex items-center justify-between p-5 hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="lock">lock</span>
+<span class="font-body font-medium">Privacidad y Seguridad</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+<!-- Logout -->
+<section class="pb-12 text-center">
+<button class="text-error font-headline font-bold uppercase tracking-widest text-sm py-4 px-8 border-2 border-error/10 rounded-full hover:bg-error/5 transition-colors active:scale-95 duration-200">
+                Cerrar Sesión
+            </button>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 bg-white dark:bg-stone-950 flex justify-around items-center px-4 pb-safe z-50 rounded-t-[0.75rem] shadow-[0_-20px_40px_rgba(75,36,9,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#4b2409]/50 px-4 py-2 hover:text-[#a13900]" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label text-[10px] font-medium uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4b2409]/50 px-4 py-2 hover:text-[#a13900]" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-label text-[10px] font-medium uppercase tracking-widest mt-1">Calendario</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4b2409]/50 px-4 py-2 hover:text-[#a13900]" href="#">
+<span class="material-symbols-outlined" data-icon="ads_click">ads_click</span>
+<span class="font-label text-[10px] font-medium uppercase tracking-widest mt-1">Objetivos</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#a13900] to-[#ff793e] text-white rounded-[0.75rem] px-4 py-2 scale-110 -translate-y-1 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label text-[10px] font-medium uppercase tracking-widest mt-1">Perfil</span>
+</a>
+</nav>
+</body></html>

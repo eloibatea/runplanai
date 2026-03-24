@@ -185,38 +185,40 @@ export default function Objetivos() {
             </div>
 
             {/* Dynamic Training Load Chart */}
-            <div className="relative h-64 w-full flex items-end gap-1 px-2">
-              {last14Days.map((day, i) => {
-                const heightPercent = (day.dist / maxDist) * 100;
-                const isMax = day.dist > 0 && day.dist === Math.max(...last14Days.map(d => d.dist));
-                
-                return (
-                  <div key={i} className="flex-1 flex flex-col items-center group/bar h-full justify-end">
-                    <div className="relative w-full flex flex-col items-center justify-end h-full">
-                      {isMax && (
-                        <div className="absolute -top-10 bg-on-surface text-surface text-[9px] font-bold px-2 py-1 rounded-full whitespace-nowrap z-10 animate-pulse shadow-lg">
-                          MAX CARGA
-                        </div>
-                      )}
-                      
-                      {/* Bar with tooltip-like hover */}
-                      <div 
-                        className={`w-full rounded-t-xl transition-all duration-500 relative ${day.dist > 0 ? (isMax ? 'kinetic-gradient shadow-[0_-4px_15px_rgba(161,57,0,0.3)]' : 'bg-primary/40 group-hover/bar:bg-primary/60') : 'bg-surface-container-highest/30'}`} 
-                        style={{ height: `${Math.max(heightPercent, 2)}%` }}
-                      >
-                        {day.dist > 0 && (
-                          <div className="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover/bar:opacity-100 transition-opacity bg-on-surface-variant text-white text-[9px] font-bold px-1.5 py-0.5 rounded pointer-events-none">
-                            {day.dist.toFixed(1)}k
+            <div className="overflow-x-auto pb-4 scrollbar-hide">
+              <div className="relative h-64 min-w-[600px] md:min-w-full flex items-end gap-1 px-2">
+                {last14Days.map((day, i) => {
+                  const heightPercent = (day.dist / maxDist) * 100;
+                  const isMax = day.dist > 0 && day.dist === Math.max(...last14Days.map(d => d.dist));
+                  
+                  return (
+                    <div key={i} className="flex-1 flex flex-col items-center group/bar h-full justify-end">
+                      <div className="relative w-full flex flex-col items-center justify-end h-full">
+                        {isMax && (
+                          <div className="absolute -top-10 bg-on-surface text-surface text-[9px] font-bold px-2 py-1 rounded-full whitespace-nowrap z-10 animate-pulse shadow-lg">
+                            MAX CARGA
                           </div>
                         )}
+                        
+                        {/* Bar with tooltip-like hover */}
+                        <div 
+                          className={`w-full rounded-t-xl transition-all duration-500 relative ${day.dist > 0 ? (isMax ? 'kinetic-gradient shadow-[0_-4px_15px_rgba(161,57,0,0.3)]' : 'bg-primary/40 group-hover/bar:bg-primary/60') : 'bg-surface-container-highest/30'}`} 
+                          style={{ height: `${Math.max(heightPercent, 2)}%` }}
+                        >
+                          {day.dist > 0 && (
+                            <div className="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover/bar:opacity-100 transition-opacity bg-on-surface-variant text-white text-[9px] font-bold px-1.5 py-0.5 rounded pointer-events-none">
+                              {day.dist.toFixed(1)}k
+                            </div>
+                          )}
+                        </div>
                       </div>
+                      <span className="mt-3 font-label text-[9px] text-on-surface-variant font-bold opacity-60 group-hover/bar:opacity-100 transition-opacity">
+                        {day.label}
+                      </span>
                     </div>
-                    <span className="mt-3 font-label text-[9px] text-on-surface-variant font-bold opacity-60 group-hover/bar:opacity-100 transition-opacity">
-                      {day.label}
-                    </span>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

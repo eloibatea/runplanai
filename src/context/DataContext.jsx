@@ -7,7 +7,9 @@ export function DataProvider({ children }) {
     const saved = localStorage.getItem('runplanai_profile');
     if (saved) {
       const parsed = JSON.parse(saved);
-      if (parsed.stravaConnected === undefined) parsed.stravaConnected = true;
+      if (parsed.stravaConnected === undefined) {
+        parsed.stravaConnected = !!localStorage.getItem('strava_access_token');
+      }
       if (parsed.garminConnected === undefined) parsed.garminConnected = false;
       return parsed;
     }
@@ -20,7 +22,7 @@ export function DataProvider({ children }) {
       calidadSueno: 88,
       desgasteCalzado: 342,
       racha: 14,
-      stravaConnected: true,
+      stravaConnected: !!localStorage.getItem('strava_access_token'),
       garminConnected: false,
     };
   });

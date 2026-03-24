@@ -17,6 +17,15 @@ export default function Perfil() {
     setEditForm(userProfile);
   }, [userProfile]);
 
+  // Capturar código de Strava al volver del redirect
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const code = params.get('code');
+    if (code) {
+      exchangeToken(code);
+    }
+  }, [location]);
+
   const handleSaveProfile = (e) => {
     e.preventDefault();
     setUserProfile(editForm);
